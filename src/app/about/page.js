@@ -31,7 +31,7 @@ const About = () => {
             <span className="text-green-400 font-bold ml-2">DATABASE</span>
             <span className="text-amber-200 font-bold ml-2">BACKEND</span>
           </p>
-          <Link href="/Anadiya3.pdf">
+          <Link href="/Anadiya_Khan_.pdf">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
