@@ -20,7 +20,7 @@ const About = () => {
           className="text-center md:text-left"
         >
           <h1 className="text-5xl md:text-6xl text-white font-bold transition-all mb-3">
-            <span className="text-blue-500 text-3xl">Hello,</span> <br /> I'm{" "}
+            <span className="text-blue-500 text-3xl">Hello </span> <br /> I am{" "}
             <span className="text-blue-400">Anadiya</span>
           </h1>
           <p className="text-lg md:text-xl text-white leading-relaxed">
