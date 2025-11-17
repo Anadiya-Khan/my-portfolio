@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Education from "@/components/Education";
+import Link from 'next/link';
 import Navbar from "@/components/Navbar";
 
 const About = () => {
@@ -30,7 +31,7 @@ const About = () => {
             <span className="text-green-400 font-bold ml-2">DATABASE</span>
             <span className="text-amber-200 font-bold ml-2">BACKEND</span>
           </p>
-          <a href="/Anadiya khan_Resume.pdf">
+          <Link href="/Anadiya3.pdf">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -38,7 +39,7 @@ const About = () => {
             >
               Resume
             </motion.button>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Right Image with Motion */}
