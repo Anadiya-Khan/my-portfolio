@@ -1,103 +1,159 @@
-import Image from "next/image";
+"use client";
+import Navbar from '@/components/Navbar';
+import Project from '@/components/Project';
+import Skills from '@/components/Skills';
+import Link from 'next/link';
+import React from 'react';
+import { motion } from "framer-motion";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <motion.div
+      initial={{ opacity: 0.2, y: 100 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-gray-900">
+      
+      <motion.div
+  className="absolute w-40 h-40 bg-purple-400 rounded-full opacity-30 top-10 left-20"
+  animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
+  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+<motion.div
+  className="absolute w-32 h-32 bg-teal-400 rounded-full opacity-20 bottom-10 right-10"
+  animate={{ y: [0, 20, 0], x: [0, -20, 0] }}
+  transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+/>
+<motion.div
+  className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-teal-500 opacity-20"
+  animate={{ opacity: [0.2, 0.4, 0.2] }}
+  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+/>
+        {/* 🔹 Background Layers */}
+       {/* {[...Array(10)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-white rounded-full opacity-40"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            x: [0, (Math.random() - 0.5) * 50, 0],
+            y: [0, (Math.random() - 0.5) * 50, 0],
+          }}
+          transition={{ repeat: Infinity, duration: 10 + Math.random() * 5, ease: "easeInOut" }}
+        />
+      ))} */}
+
+      <motion.div
+  className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-10"
+  animate={{ backgroundPositionX: ["0%", "100%", "0%"] }}
+  transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+  style={{ backgroundSize: "200% 200%" }}
+/>
+
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r bg-[#001F3F]  animate-gradient-x opacity-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.3 }}
+          transition={{ duration: 3, ease: "easeInOut" }}
+        ></motion.div>
+
+        {/* 🔹 Content */}
+        <div className="relative z-10 text-white px-6">
+          <motion.h1
+            className="text-5xl md:text-6xl font-extrabold mb-4"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Anadiya <span className="text-blue-400">Khan</span>
+          </motion.h1>
+
+          <motion.h2
+            className="text-2xl md:text-3xl font-semibold text-gray-300 mb-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Read our docs
-          </a>
+            MERN Stack Developer
+          </motion.h2>
+
+          <motion.p
+            className="max-w-2xl text-lg md:text-xl text-gray-300"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Building <span className="text-blue-400"> fast </span>,
+            <span className="text-purple-400"> reliable </span>, and
+            <span className="text-teal-400"> scalable </span> websites.
+          </motion.p>
+
+          <motion.p
+            className="max-w-2xl text-gray-400 mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+          >
+            Passionate about <span className="text-blue-400">frontend</span> and <span className="text-purple-400">backend</span> development.  
+            Love creating <span className="text-teal-400">interactive</span> and <span className="text-yellow-400">user-friendly</span> experiences.
+          </motion.p>
+
+          <motion.div
+            className="flex space-x-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+          >
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition"
+              >
+                Contact Me
+              </Link>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="#projects"
+                className="px-6 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition"
+              >
+                View Projects
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Section Transitions */}
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+         className="w-full min-h-screen px-4 py-16 shadow-2xl bg-gradient-to-br from-[#1E3C72] via-[#2A5298] to-[#2980B9]"
+      >
+        <Skills />
+      </motion.div>
+
+      <hr className="border-gray-700 my-8" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <Project />
+      </motion.div>
+    </motion.div>
   );
-}
+};
+
+export default Home;
