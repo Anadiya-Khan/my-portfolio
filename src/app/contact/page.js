@@ -46,7 +46,7 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            Have questions, opportunities, or feedback? I'd love to hear from you and discuss how we can collaborate.
+            Have questions, opportunities, or feedback? I would love to hear from you and discuss how we can collaborate.
           </motion.p>
 
           {/* Contact Details */}
@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
             <div className='flex items-center gap-4 text-gray-800'>
               <FaMapMarkerAlt className='text-purple-600 text-xl' />
-              <span>Mumbai, India</span>
+              <span>Mumbai India</span>
             </div>
           </motion.div>
 
