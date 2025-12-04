@@ -28,8 +28,8 @@ const About = () => {
             Specialized in
             <span className="text-blue-400 font-bold ml-2">REACT</span>
             <span className="text-yellow-400 font-bold ml-2">JAVASCRIPT</span>
-            <span className="text-green-400 font-bold ml-2">DATABASE</span>
-            <span className="text-amber-200 font-bold ml-2">BACKEND</span>
+            <span className="text-green-400 font-bold ml-2">MongoDB</span>
+            <span className="text-green-400 font-bold ml-2">Node.js/Express.js</span>
           </p>
           <Link href="/Anadiya_Khan_.pdf">
             <motion.button
