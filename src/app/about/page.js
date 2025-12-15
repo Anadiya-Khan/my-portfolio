@@ -25,11 +25,11 @@ const About = () => {
             <span className="text-blue-400">Anadiya</span>
           </h1>
           <p className="text-lg md:text-xl text-white leading-relaxed">
-            Specialized in
+            Skilled in
             <span className="text-blue-400 font-bold ml-2">REACT</span>
             <span className="text-yellow-400 font-bold ml-2">JAVASCRIPT</span>
-            <span className="text-green-400 font-bold ml-2">MongoDB</span>
-            <span className="text-green-400 font-bold ml-2">Node.js/Express.js</span>
+            <span className="text-green-400 font-bold ml-2">MONGODB</span>
+            <span className="text-gray-300 font-bold ml-2">NODE EXPRESS</span>
           </p>
           <Link href="/Anadiya_Khan_.pdf">
             <motion.button
