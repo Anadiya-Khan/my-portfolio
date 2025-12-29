@@ -18,7 +18,7 @@ const Project = () => {
       description: "Built a MERN Resume Builder & Analyzer with secure authentication, resume creation, and PDF download.Integrated AI-based analysis to improve resume quality and job readiness.",
       lang: ["MongoDB","Express.js","React.js","Node.js"],
       git: "https://github.com/Anadiya-Khan/AI-Powered-Resume-Builder---Analyzer",
-      // vercel: "https://ai-resume-builder-analyzer-3g9k.onrender.com",
+      vercel: "https://ai-resume-builder-analyzer-3g9k.onrender.com",
     }
   ];
 
