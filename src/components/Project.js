@@ -62,7 +62,7 @@ const Project = () => {
 
       {/* grid layout */}
       <motion.ul
-        className="grid gap-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 p-4"
+        className="grid gap-10 grid-cols sm:grid-cols-2 lg:grid-cols-3 p-4"
         variants={containerVariants}
       >
         {project.map((val, index) => (
