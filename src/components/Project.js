@@ -16,9 +16,17 @@ const Project = () => {
       img: "/images/resume.png",
       title: "AI Powered Resume Builder And Analyzer",
       description: "Built a MERN Resume Builder & Analyzer with secure authentication, resume creation, and PDF download.Integrated AI-based analysis to improve resume quality and job readiness.",
-      lang: ["MongoDB","Express.js","React.js","Node.js"],
+      lang: ["MongoDB","Express.js","React.js","Node.js","Docker"],
       git: "https://github.com/Anadiya-Khan/AI-Powered-Resume-Builder---Analyzer",
       vercel: "https://ai-resume-builder-analyzer-3g9k.onrender.com",
+    },
+     {
+      img: "/images/ecommerce.png",
+      title: "Modest Elegance",
+      description: "A full-stack MERN e-commerce platform with secure authentication, product & order management, real-time cart, and Stripe payment integration.",
+      lang: ["MongoDB","Express.js","React.js","Node.js"],
+      git: "https://github.com/Anadiya-Khan/Ecommerce-Abaya",
+      vercel: "https://modest-elegance.onrender.com",
     }
   ];
 
